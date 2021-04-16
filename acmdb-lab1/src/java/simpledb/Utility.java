@@ -110,7 +110,6 @@ public class Utility {
 
         HeapFile hf = openHeapFile(cols, f);
         HeapPageId pid = new HeapPageId(hf.getId(), 0);
-
         HeapPage page = null;
         try {
             page = new HeapPage(pid, HeapPage.createEmptyPageData());
