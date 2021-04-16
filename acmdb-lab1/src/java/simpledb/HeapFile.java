@@ -132,7 +132,7 @@ public class HeapFile implements DbFile {
         }
 
 
-        public void open() throws DbException. TransactionAbortedException{
+        public void open() throws DbException, TransactionAbortedException{
             pgNo=0;
             iterator=currentTupleIterator();
         }

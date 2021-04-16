@@ -91,7 +91,7 @@ public class Tuple implements Serializable {
         for(int i=0; i<fields.length;++i){
             s.append(fields[i]);
             if(i<fields.length-1){
-                s.append("\t")
+                s.append("\t");
             }
         }
         return s.toString();

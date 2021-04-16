@@ -317,7 +317,7 @@ public class HeapPage implements Page {
                 ++current;
                 return tuple;
             }
-            throw new noSuchElementException();
+            throw new NoSuchElementException();
         }
     }
 
