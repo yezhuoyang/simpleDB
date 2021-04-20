@@ -78,7 +78,7 @@ public class BTreeChecker {
         BTreePage page = (BTreePage )bt.getPage(tid, dirtypages, pageId, Permissions.READ_ONLY);
         assert(page.getParentId().equals(parentId));
 
-        if (page.getId().pgcateg() == BTreePageId.LEAF) {
+        if(page.getId().pgcateg() == BTreePageId.LEAF) {
             BTreeLeafPage bpage = (BTreeLeafPage) page;
             bpage.checkRep(bt.keyField(), lowerBound, upperBound, checkOccupancy, depth);
             return new SubtreeSummary(bpage, depth);
