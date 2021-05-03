@@ -129,7 +129,15 @@ public class BufferPool {
     private void updateDirtiedPages(TransactionId tid, ArrayList<Page> dirtiedPages) {
         for (Page dirtied : dirtiedPages) {
             dirtied.markDirty(true, tid);
-            pages.put(dirtied.getId(), dirtied);
+            PageId pid=dirtied.getId();
+            if(!pages.containsKey(pid)&&pages.size()==numPages){
+                try{
+                    evictPage();
+                }catch (DbException e){
+                    e.printStackTrace();
+                }
+            }
+            pages.put(pid,dirtied);
         }
     }
     /**
