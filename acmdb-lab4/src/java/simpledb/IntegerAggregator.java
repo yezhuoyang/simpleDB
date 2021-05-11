@@ -50,7 +50,7 @@ public class IntegerAggregator implements Aggregator {
 
     public IntegerAggregator(int gbfield, Type gbfieldtype, int afield, Op what) {
         this.gbfield = gbfield;
-        if (gbfield == NO_GROUPING) {
+        if(gbfield == NO_GROUPING) {
             this.td = new TupleDesc(new Type[]{Type.INT_TYPE}, new String[]{"aggregateVal"});
         } else {
             this.td = new TupleDesc(new Type[]{gbfieldtype, Type.INT_TYPE}, new String[]{"groupVal", "aggregateVal"});

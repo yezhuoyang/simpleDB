@@ -131,7 +131,7 @@ public class Utility {
     public static HeapFile openHeapFile(int cols, File f) {
         // create the HeapFile and add it to the catalog
     	TupleDesc td = getTupleDesc(cols);
-        HeapFile hf = new HeapFile(f, td);
+    	HeapFile hf = new HeapFile(f, td);
         Database.getCatalog().addTable(hf, UUID.randomUUID().toString());
         return hf;
     }

@@ -136,7 +136,7 @@ public class JoinOptimizer {
      */
     public int estimateJoinCardinality(LogicalJoinNode j, int card1, int card2,
             boolean t1pkey, boolean t2pkey, Map<String, TableStats> stats) {
-        if (j instanceof LogicalSubplanJoinNode) {
+        if(j instanceof LogicalSubplanJoinNode) {
             // A LogicalSubplanJoinNode represents a subquery.
             // You do not need to implement proper support for these for Lab 5.
             return card1;

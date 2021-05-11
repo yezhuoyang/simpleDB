@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.ArrayList;
 import java.util.Random;
 /**
- c* BufferPool manages the reading and writing of pages into memory from
+ * BufferPool manages the reading and writing of pages into memory from
  * disk. Access methods call into it to retrieve pages, and it fetches
  * pages from the appropriate location.
  * <p>
@@ -140,6 +140,7 @@ public class BufferPool {
             pages.put(pid,dirtied);
         }
     }
+
     /**
      * Add a tuple to the specified table on behalf of transaction tid.  Will
      * acquire a write lock on the page the tuple is added to and any other 
@@ -212,7 +213,7 @@ public class BufferPool {
      * @param pid an ID indicating the page to flush
      */
     private synchronized  void flushPage(PageId pid) throws IOException {
-        if (!pages.containsKey(pid)) {
+        if(!pages.containsKey(pid)) {
             return;
         }
         Page page = pages.get(pid);
