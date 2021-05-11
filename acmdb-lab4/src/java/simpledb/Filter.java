@@ -79,7 +79,7 @@ public class Filter extends Operator {
 
     @Override
     public void setChildren(DbIterator[] children) {
-        child=children[0]
+        child=children[0];
     }
 
 }

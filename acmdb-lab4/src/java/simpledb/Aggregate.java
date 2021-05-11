@@ -15,7 +15,7 @@ public class Aggregate extends Operator {
     private static final long serialVersionUID = 1L;
 
     private final int afield,gfield;
-    private final Aggregate.Op aop;
+    private final Aggregator.Op aop;
     private DbIterator child;
     private DbIterator result = null;
     private TupleDesc td;

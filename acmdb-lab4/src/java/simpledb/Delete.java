@@ -11,7 +11,7 @@ public class Delete extends Operator {
     private static final long serialVersionUID = 1L;
     private static final TupleDesc TD=new TupleDesc(new Type[] {Type.INT_TYPE},new String[]{"number of deleted tuples"});
 
-    private final TransactionIf tid;
+    private final TransactionId tid;
     private DbIterator child;
     private boolean fetched=false;
 

@@ -113,11 +113,11 @@ public class IntHistogram {
             case NOT_EQUALS:
                 return 1 - estimateSelectivity(Predicate.Op.EQUALS, v);
             default:
-                assert(false);
-    	// some code goes here
-        return -1.0;
+                assert (false);
+                // some code goes here
+                return -1.0;
+        }
     }
-    
     /**
      * @return
      *     the average selectivity of this histogram.
@@ -125,12 +125,14 @@ public class IntHistogram {
      *     This is not an indispensable method to implement the basic
      *     join optimization. It may be needed if you want to
      *     implement a more efficient optimization
-     * */
-    public double avgSelectivity()
-    {
+     *
+     */
+    public double avgSelectivity() {
         // some code goes here
         return 1.0;
     }
+
+
     
     /**
      * @return A string describing this histogram, for debugging purposes
